@@ -1,0 +1,61 @@
+.header-img {
+  width: 100%;       /* ocupa todo el ancho del card */
+  height: auto;      /* se ajusta de alto automáticamente */
+}
+
+@media (min-width: 992px) {
+  .header-img {
+    width: 80%;      /* en escritorio la reducís un poco */
+    margin: 0 auto;  /* centrada */
+  }
+}
+
+body {
+  font-family: 'Newsreader', serif;
+}
+.bg-main{
+  background-color:burlywood;
+}
+
+.texto_titulo{
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+.texto_centrado{
+  text-align: center;
+  font-size: 18px;
+}
+
+.imagen_principal {
+  width: 100%;                   
+  max-width: 100%;               
+  aspect-ratio: 3/4;              /* proporción aproximada vertical */
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0) 25%
+    ),
+    url("../src/img/Foto.jpg");
+  background-size: contain;       /* muestra toda la imagen sin recortar */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bounce-arrow {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
