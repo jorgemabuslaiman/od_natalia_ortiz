@@ -59,3 +59,67 @@ body {
     transform: translateY(5px);
   }
 }
+
+/*Error 404*/
+
+.error-page {
+  min-height: 100vh;
+  background: #fdf0f4; /* rosa claro */
+  color: #9b1d3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.error-code {
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.error-desc {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Diente */
+.tooth-icon-container {
+  font-size: 8rem; /* grande y visible */
+  color: #9b1d3a;
+}
+
+/* Botón centrado debajo */
+.button-container {
+  margin-top: 20px;
+}
+
+/* Responsive para mobile */
+@media (max-width: 576px) {
+  .error-code {
+    font-size: 4rem;
+  }
+
+  .error-message {
+    font-size: 1.5rem;
+  }
+
+  .error-desc {
+    font-size: 1rem;
+  }
+
+  .tooth-icon-container {
+    font-size: 6rem;
+  }
+
+  .button-container button {
+    width: 100%;
+    padding: 10px;
+  }
+}

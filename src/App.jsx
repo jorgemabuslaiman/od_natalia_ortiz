@@ -6,6 +6,7 @@ import { AboutComponent } from './pages/aboutComponent'
 import { ServicesPage } from './pages/servicesPage'
 import { TestimonialsPage } from './pages/testimonialsPage'
 import { ContactPage } from './pages/contactPage'
+import {ErrorPage} from './pages/errorPage'
 import WhatsAppComponent from './components/whatsappComponent'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/services' element={<ServicesPage/>}/>
           <Route path='/testimonials' element={<TestimonialsPage/>}/>
           <Route path='/contact' element={<ContactPage/>}/>
+          <Route path='/*' element={<ErrorPage/>}/>
         </Routes>
       </BrowserRouter>
       <WhatsAppComponent/>

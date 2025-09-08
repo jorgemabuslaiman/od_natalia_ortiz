@@ -1,5 +1,4 @@
 import { NavbarComponent } from "../components/navbarComponent";
-import { FooterComponent } from "../components/footerComponent";
 import WhatsappButton from "../components/whatsappComponent";
 
 export const ContactPage = () => {

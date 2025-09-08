@@ -8,9 +8,10 @@ export const HeaderComponent = () => {
         <Card.Img variant="top" className="imagen_principal"/>
         <Card.Body>
           <Card.Text>
-            <p className='texto_titulo'>Aqui encontraras a la mejor odontologa</p>
+            <span className='texto_titulo'>Aqui encontraras a la mejor odontologa</span>
           </Card.Text>
         </Card.Body>
+
       </Card>
 
       </div>
