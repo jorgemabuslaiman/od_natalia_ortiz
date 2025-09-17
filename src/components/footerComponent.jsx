@@ -16,7 +16,7 @@ export const FooterComponent = () => {
 
           {/* Columna derecha: redes sociales */}
           <Col md={4} className="mb-3 text-center text-md-end">
-            <h5>Seguinos</h5>
+            <h5>Seguime</h5>
             <a 
               href="https://www.instagram.com/od.nataliaortiz?igsh=MTJuN24xN3hpeTg1dQ==" className="text-light fs-4 me-3" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="fs-4 me-3" style={{ color: "#E1306C" }} />
