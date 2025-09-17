@@ -10,7 +10,7 @@ export const FooterComponent = () => {
           {/* Columna izquierda: info de contacto */}
           <Col md={4} className="mb-3">
             <h5>Contacto</h5>
-            <p className="mb-1">📍 Direccion: Pcia de Córdoba 209, T4000 San Miguel de Tucumán, Tucumán</p>
+            <p className="mb-1">📍 Direccion: Balcarce 197, T4000 San Miguel de Tucumán, Tucumán</p>
             <p className="mb-1">📞 Telefono (solo whatsapp): 3814677805</p>
           </Col>
 
