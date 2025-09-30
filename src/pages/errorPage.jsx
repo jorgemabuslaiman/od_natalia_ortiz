@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FaTooth } from "react-icons/fa"; // Icono de diente
-import '../App.css';
+import '../App.css'
 
 export const ErrorPage = () => {
   const navigate = useNavigate();
