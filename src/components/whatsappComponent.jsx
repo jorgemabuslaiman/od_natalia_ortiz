@@ -1,41 +1,72 @@
-//icono flotante de whatsapp donde tendra el texto "Pedir turno por aqui" al lado del icono
+import React, { useState, useEffect } from "react";
+import { FaWhatsapp, FaTimes } from "react-icons/fa";
+import '../App.css';
 
-import React from "react";
-import { FaWhatsapp } from "react-icons/fa"; // Ícono oficial
+const whatsappNumber = "5493814677805";
 
-const whatsappNumber = "5493814677805"; // Cambia esto por el número de tu clínica
+const WhatsAppComponent = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [showAnimation, setShowAnimation] = useState(true);
 
-const WhatsAppComponent = () => (
-  <a
-    href={`https://wa.me/${whatsappNumber}`}
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      position: "fixed",
-      right: "24px",
-      bottom: "24px",
-      zIndex: "9999",
-      backgroundColor: "#25D366",
-      borderRadius: "30px",
-      padding: "0 20px 0 12px",
-      height: "60px",
-      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-      display: "flex",
-      alignItems: "center",
-      cursor: "pointer",
-      transition: "box-shadow 0.2s",
-      gap: "12px",
-      minWidth: "60px",
-    }}
-    aria-label="Chat por WhatsApp"
-    tabIndex={0}
-    onFocus={e => e.target.style.outline = "none"}
-  >
-    <FaWhatsapp size={32} color="#fff" />
-    <span style={{ color: "#fff", fontWeight: "bold", fontSize: "16px", whiteSpace: "nowrap", textDecoration: "none" }}>
-      Pedir turno
-    </span>
-  </a>
-);
+  useEffect(() => {
+    // Mostrar animación inicial después de 3 segundos
+    const timer = setTimeout(() => {
+      setShowAnimation(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleToggle = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent("Hola! Me gustaría agendar una consulta odontológica. ¿Cuándo tienen disponibilidad?");
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+  };
+
+  return (
+    <div className="whatsapp-container">
+      {isExpanded && (
+        <div className="whatsapp-chat-bubble">
+          <div className="chat-header">
+            <div className="chat-info">
+              <div className="chat-name">Dra. Natalia Ortiz</div>
+              <div className="chat-status">En línea</div>
+            </div>
+            <button 
+              className="chat-close" 
+              onClick={handleToggle}
+              aria-label="Cerrar chat"
+            >
+              <FaTimes />
+            </button>
+          </div>
+          <div className="chat-message">
+            <p>¡Hola! 👋</p>
+            <p>¿En qué puedo ayudarte hoy? Estoy aquí para responder tus consultas sobre nuestros servicios odontológicos.</p>
+          </div>
+          <button 
+            className="chat-button"
+            onClick={handleWhatsAppClick}
+          >
+            <FaWhatsapp /> Iniciar Conversación
+          </button>
+        </div>
+      )}
+      
+      <button
+        className={`whatsapp-fab ${showAnimation ? 'pulse' : ''}`}
+        onClick={isExpanded ? handleWhatsAppClick : handleToggle}
+        aria-label="Chat por WhatsApp"
+      >
+        <FaWhatsapp />
+        {!isExpanded && (
+          <span className="whatsapp-text">Pedir turno</span>
+        )}
+      </button>
+    </div>
+  );
+};
 
 export default WhatsAppComponent;

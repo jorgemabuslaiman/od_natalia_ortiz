@@ -1,0 +1,15 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Diente -->
+  <path d="M20 15C20 10 25 5 35 5C45 5 50 10 50 15C50 20 50 35 50 40C50 50 45 55 35 55C25 55 20 50 20 40C20 35 20 20 20 15Z" 
+        fill="currentColor" stroke="currentColor" stroke-width="1"/>
+  
+  <!-- Texto ODONTÓLOGA -->
+  <text x="65" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="currentColor">
+    ODONTÓLOGA
+  </text>
+  
+  <!-- Texto NATALIA ORTIZ -->
+  <text x="65" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="currentColor">
+    NATALIA ORTIZ
+  </text>
+</svg>

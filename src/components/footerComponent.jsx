@@ -1,38 +1,89 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaMapMarkerAlt, FaWhatsapp, FaClock, FaHeart } from "react-icons/fa";
+import '../App.css';
 
 export const FooterComponent = () => {
   return (
-    <footer className="bg-dark text-light py-4 mt-5">
+    <footer className="footer-custom">
       <Container>
-        <Row className="text-center text-md-start">
-          {/* Columna izquierda: info de contacto */}
-          <Col md={4} className="mb-3">
-            <h5>Contacto</h5>
-            <p className="mb-1">📍 Direccion: Balcarce 197, T4000 San Miguel de Tucumán, Tucumán</p>
-            <p className="mb-1">📞 Telefono (solo whatsapp): 3814677805</p>
+        <Row className="footer-main">
+          {/* Información de la Doctora */}
+          <Col lg={4} md={6} className="mb-4">
+            <div className="footer-section">
+              <h4 className="footer-title">Dra. Natalia Ortiz</h4>
+              <p className="footer-description">
+                Cuidado dental profesional con más de 10 años de experiencia. 
+                Tu sonrisa es nuestra prioridad.
+              </p>
+              <div className="footer-feature">
+                <FaHeart className="feature-icon-small" />
+                <span>Atención personalizada y cercana</span>
+              </div>
+            </div>
           </Col>
 
-          {/* Columna derecha: redes sociales */}
-          <Col md={4} className="mb-3 text-center text-md-end">
-            <h5>Seguime</h5>
-            <a 
-              href="https://www.instagram.com/od.nataliaortiz?igsh=MTJuN24xN3hpeTg1dQ==" className="text-light fs-4 me-3" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="fs-4 me-3" style={{ color: "#E1306C" }} />
-            </a>
-            <a 
-              href="https://www.tiktok.com/@nataliaortiz256?_t=ZM-8zMkavk3u2q&_r=1" className="text-light fs-4" target="_blank" rel="noopener noreferrer">
-              <FaTiktok className="fs-4" style={{ color: "#000000" }} />
-            </a>
+          {/* Información de Contacto */}
+          <Col lg={4} md={6} className="mb-4">
+            <div className="footer-section">
+              <h5 className="footer-subtitle">Contacto</h5>
+              <div className="contact-item">
+                <FaMapMarkerAlt className="contact-icon" />
+                <span>Balcarce 197, San Miguel de Tucumán, Tucumán</span>
+              </div>
+              <div className="contact-item">
+                <FaWhatsapp className="contact-icon" />
+                <span>381 467-7805 (Solo WhatsApp)</span>
+              </div>
+              <div className="contact-item">
+                <FaClock className="contact-icon" />
+                <span>Lun-Vie: 9:00-18:00 | Sáb: 9:00-13:00</span>
+              </div>
+            </div>
           </Col>
 
+          {/* Redes Sociales */}
+          <Col lg={4} md={12} className="mb-4">
+            <div className="footer-section">
+              <h5 className="footer-subtitle">Seguinos</h5>
+              <p className="social-description">
+                Consejos, tips y novedades sobre salud dental
+              </p>
+              <div className="social-links">
+                <a 
+                  href="https://www.instagram.com/od.nataliaortiz?igsh=MTJuN24xN3hpeTg1dQ==" 
+                  className="social-link instagram" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="Seguinos en Instagram"
+                >
+                  <FaInstagram />
+                  <span>Instagram</span>
+                </a>
+                <a 
+                  href="https://www.tiktok.com/@nataliaortiz256?_t=ZM-8zMkavk3u2q&_r=1" 
+                  className="social-link tiktok" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="Seguinos en TikTok"
+                >
+                  <FaTiktok />
+                  <span>TikTok</span>
+                </a>
+              </div>
+            </div>
+          </Col>
         </Row>
 
-        {/* Línea de copyright */}
-        <Row className="pt-3 border-top border-secondary mt-3">
+        {/* Copyright */}
+        <Row className="footer-bottom">
           <Col className="text-center">
-            <small>© {new Date().getFullYear()} Od. Natalia Ortiz. Todos los derechos reservados.</small>
+            <p className="copyright">
+              © {new Date().getFullYear()} Od. Natalia Ortiz. Todos los derechos reservados.
+            </p>
+            <p className="developed-by">
+              Desarrollado con <FaHeart className="heart-icon" /> por Junior's Software
+            </p>
           </Col>
         </Row>
       </Container>
